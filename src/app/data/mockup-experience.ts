@@ -3,50 +3,42 @@ import { Experience } from "../interfaces/experience";
 export let arrExperience: Experience[] = [
     {
         id: 1,
-        nombre: "Proyecto de suministros tecnologicos",
-        descripcion: "Proyecto empresarial incluye inventario de productos tecnologicos para empresas PYMES",
-        fechaInicio: new Date('2022-01-01'),
-        fechaFinal: new  Date('2022-10-10'),
+        nombre: "Aktek",
+        descripcion: "Desarrollo de ERP para instituciones educativas",
+        fechaInicio: new Date('2021-01-01'),
+        fechaFinal: new  Date('2022-11-10'),
         contacto: "12345678"
     },
     {
         id: 2,
-        nombre: "Proyecto de facturación para lavacard",
-        descripcion: "Proyecto sistema de facturación para un lavacard",
-        fechaInicio: new Date('2022-03-20'),
-        fechaFinal: new  Date('2022-05-03'),
+        nombre: "IGT.SAS",
+        descripcion: "Desarrollo del sistema de facturacion y cotizacion de productos",
+        fechaInicio: new Date('2019-05-28'),
+        fechaFinal: new  Date('2021-01-01'),
         contacto: "12345678"
     },
     {
         id: 3,
-        nombre: "Proyecto de suministros tecnologicos 3",
-        descripcion: "Proyecto empresarial incluye inventario de servicios tecnologicos",
-        fechaInicio: new Date('2022-01-01'),
-        fechaFinal: new  Date('2022-10-10'),
+        nombre: "HB Sadelec",
+        descripcion: "Desarrollo de sistemas de getion de la informacio  para el proceso de produccion y administracion de recursos en planta",
+        fechaInicio: new Date('2017-02-15'),
+        fechaFinal: new  Date('2019-05-28'),
         contacto: "12345678"
     },
     {
         id: 4,
-        nombre: "Proyecto de tareas pendientes",
-        descripcion: "Proyecto para organizar las tareas pendientes",
-        fechaInicio: new Date('2022-11-01'),
-        fechaFinal: new  Date(),
+        nombre: "CL ingenieria Comercial",
+        descripcion: "Desarrollo de las herramientas software para programa de calidad en producto terminado",
+        fechaInicio: new Date('2018-04-10'),
+        fechaFinal: new  Date('2019-05-28'),
         contacto: "12345678"
     },
-    {
+     {
         id: 5,
-        nombre: "Analisis de sistemas contables",
-        descripcion: "Proyecto aplicación para el registro de procesos contables",
-        fechaInicio: new Date('2021-01-01'),
-        fechaFinal: new  Date('2022-01-10'),
-        contacto: "12345678"
-    },
-    {
-        id: 6,
-        nombre: "Proyecto de tienda en línea ",
-        descripcion: "Proyecto compra en línea de productos",
-        fechaInicio: new Date('2022-01-01'),
-        fechaFinal: new  Date(),
+        nombre: "MEC.SAS",
+        descripcion: "Desarrollo portal web para la gestion empresarial y de empleados",
+        fechaInicio: new Date('2016-05-28'),
+        fechaFinal: new  Date('2019-05-28'),
         contacto: "12345678"
     },
 ];
