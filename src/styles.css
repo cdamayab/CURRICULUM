@@ -15,6 +15,7 @@ app-root {
 .component-section{
 	position:relative;
 	padding: 100px 0px 0px 0px;	
+	min-width: 600px;
 }
 
 #about {
@@ -29,9 +30,13 @@ app-root {
 	overflow: auto;
 
 }
+app-header {
+	min-width: 600px;
+}
 
 app-footer {
 	margin-top: 100px;
 	position: absolute;
 	width: 100%;
+	min-width: 600px;
 }
