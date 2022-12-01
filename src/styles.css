@@ -8,3 +8,8 @@ body {
 app-root {
 	width: 100%;
 }
+
+#experience {
+	width: 50%;
+	margin: 0 auto;
+}

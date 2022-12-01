@@ -1,0 +1,123 @@
+.timeline-box .dot, .timeline-bar {
+	background-color: #07cb79;
+}
+
+.timeline-box-left {
+  float: left;
+  clear: left;
+}
+
+.timeline-box-right {
+  float: right;
+  clear: right;
+}
+
+.timeline-box-left .dot {
+  right: 0;
+  margin-right: -4px;
+}
+
+.timeline-box-right .dot {
+  left: 0;
+  margin-left: -4px;
+}
+
+.timeline-box-left .dot, .timeline-box-right .dot {
+  top: 80px;
+  width: 8px;
+  height: 8px;
+  display: block;
+  position: absolute;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}  
+
+.timeline-box {
+  width: 50%;
+  color: #757575;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.timeline-box h3 {
+  color: #414141;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.1;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.timeline-box h4 {
+  color: #878787;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.1;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.timeline-box-inner, a:hover {
+  border-color: #07cb79;
+  background-color: #fff;
+  box-shadow: 0 1px 6px rgba(0,0,0,.12),0 1px 4px rgba(0,0,0,.24);
+}
+
+.timeline-box .date {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  margin-bottom: 15px;
+  color: #07cb79;
+}
+
+.timeline-box-left .timeline-box-inner {
+  margin-right: 35px;
+}
+
+.timeline-box-right .timeline-box-inner {
+  margin-left: 35px;
+}
+
+.timeline-box-inner {
+  padding: 20px 5%;
+  position: relative;
+  border-width: 5px 0 0;
+  border-style: solid;
+}
+
+.timeline-box-left .arrow, .timeline-box-right .arrow {
+  top: 60px;
+  width: 12px;
+  height: 41px;
+  display: block;
+  position: absolute;
+  background-image: url(https://rscard.px-lab.com/html/img/arrows.png);
+  background-repeat: no-repeat;
+}
+
+.timeline-box-left .timeline-box-inner .arrow {
+  right: -12px;
+  background-position: -18px 0;
+}
+
+.timeline-box-right .timeline-box-inner .arrow {
+  left: -12px;
+  background-position: 0 0;
+}
+
+.timeline-bar {
+  content: '';
+  width: 4px;
+  opacity: .2;
+  margin-left: -2px;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  height: 100%;
+}
