@@ -3,13 +3,16 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "outDir": "./out-tsc/app",
-    "types": []
+    "types": [
+        "webpack-env"
+    ]
   },
   "files": [
     "src/main.ts",
     "src/polyfills.ts"
   ],
   "include": [
-    "src/**/*.d.ts"
+    "src/**/*.d.ts",
+    "src/app/data/languajes/*.ts"                              // Incluye todos los archivos .ts dentro de la carpeta "src" y sus subcarpetas - Esto se hace por los archivos de lenguges
   ]
 }

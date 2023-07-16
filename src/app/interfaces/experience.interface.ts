@@ -1,4 +1,4 @@
-export interface Experience {
+export interface ExperienceInterface {
   	id: number,
     nombre     : string,
     descripcion: string,

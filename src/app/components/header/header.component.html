@@ -1,28 +1,35 @@
 <nav class="navbar navbar-expand-lg fixed-top navbarScroll">
     <div class="container">
-        <a class="navbar-brand" href="#">Cristhian Amaya</a>
+        <a class="navbar-brand" href="#">{{LANG.CONST_HERO_NAME}}</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#home">Home</a>
+                    <a class="nav-link" href="#home">{{LANG.CONST_HEADER_HOME}}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#about">About</a>
+                    <a class="nav-link" href="#about">{{LANG.CONST_HEADER_ABOUT}}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#experience">Work Experience</a>
+                    <a class="nav-link" href="#experience">{{LANG.CONST_HEADER_WORK_EXP}}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#portfolio">Portfolio</a>
+                    <a class="nav-link" href="#portfolio">{{LANG.CONST_HEADER_PORTFOLIO}}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contact</a>
+                    <a class="nav-link" href="#contact">{{LANG.CONST_HEADER_CONTACT}}</a>
+                </li>
+                <li class="nav-item">
+                    <select [(ngModel)]="selectedLanguage" (change)="onLanguageChange($event)">
+                        <option *ngFor="let option of languageOptions" [value]="option">{{ option }}</option>
+                    </select>
                 </li>
             </ul>
             
         </div>
     </div>
 </nav>
+
+  
