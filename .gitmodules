@@ -1,0 +1,4 @@
+[submodule "dist/curriculum"]
+	path = dist/curriculum
+	url = https://damaya@github.com/cdamayab/CURRICULUM.git
+	branch = gh-pages
