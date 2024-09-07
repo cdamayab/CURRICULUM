@@ -9,6 +9,9 @@ import { ExperienceComponent } from './components/experience/experience.componen
 import { HeroComponent } from './components/hero/hero.component';
 
 import { FormsModule } from '@angular/forms';
+import { StudiesComponent } from './studies/studies.component';
+import { PortfolioComponent } from './portfolio/portfolio.component';
+import { InterestsComponent } from './interests/interests.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +20,9 @@ import { FormsModule } from '@angular/forms';
     FooterComponent,
     ExperienceComponent,
     HeroComponent,
+    StudiesComponent,
+    PortfolioComponent,
+    InterestsComponent,
   ],
   imports: [
     FormsModule,                   // npm install @angular/forms

@@ -64,7 +64,8 @@ img {
 }
 
 .profile-preword {
-  margin-bottom: 28px;
+  font-size: 30px;
+  margin-bottom: 0px;
 }
 
 .profile-preword span, .profile-social {
@@ -165,7 +166,7 @@ img {
 
 .presentation p {
   font-family: open sans,sans-serif;
-  font-size: 26px;
+  font-size: 20px;
   line-height: 1.5;
   color: #000;
   border: 0;
@@ -174,5 +175,6 @@ img {
   outline: 0;
   padding: 0;
   vertical-align: baseline;
-  text-align: center;
+  text-align: justify;
+  text-align-last: center; 
 }

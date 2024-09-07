@@ -1,6 +1,6 @@
-import { LanguajeInterface } from "../../interfaces/languaje.interface";
+import { LanguajeInterface, ExperienceInterface } from "../../interfaces/languaje.interface";
 
-export const LangConstans : LanguajeInterface = {
+export const LangConstans: LanguajeInterface = {
     CONST_HERO_NAME:            "error"       ,
     CONST_HEADER_HOME:          "error"       ,
     CONST_HEADER_ABOUT:         "error"       ,
@@ -15,4 +15,17 @@ export const LangConstans : LanguajeInterface = {
     CONST_CONTACT_ADRESS:       "error"       ,
     CONST_CONTACT_EMAIL:        "error"       ,
     CONST_CONTACT_PHONE:        "error"       ,
-}
+    CONST_CONTACT_JOBTITLE:     "error"       ,
+
+    EXPERIENCE: [
+        {
+            id: 1,
+            nombre: "error",
+            puesto: "error",
+            descripcion: "error",
+            fechaInicio: new Date('2021-01-01'),
+            fechaFinal: new Date('2022-11-10'),
+            contacto: "error"
+        }
+    ]
+};

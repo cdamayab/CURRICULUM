@@ -4,7 +4,7 @@
 	<div class="col" *ngFor="let proyecto of experience; first as isFirst">
 		<div class="timeline-box " [ngClass]="proyecto.id % 2 === 1 ? 'timeline-box-left' : 'timeline-box-right'" [ngStyle]="proyecto.id % 2 === 0 && {'top': '100px'}  || null">
 			<span class="dot"></span>
-	    	<div class="timeline-box-inner animate-right animated">
+			<div class="timeline-box-inner animate-right animated">
 				<span class="arrow"></span>
 				<div class="date">
 					{{proyecto.fechaInicio| date: 'dd'}}/{{proyecto.fechaInicio | date:'MM'}}/{{proyecto.fechaInicio | date: 'yyyy'}} 
@@ -12,7 +12,7 @@
 					{{proyecto.fechaFinal | date: 'dd'}}/{{proyecto.fechaFinal  | date:'MM'}}/{{proyecto.fechaFinal  | date: 'yyyy'}}
 				</div>
 				<h3>{{ proyecto.nombre }}</h3>
-				<h4>Full Stack developer</h4>
+				<h4>{{ proyecto.puesto }}</h4>
 				<p>{{ proyecto.descripcion }}</p>
 				<!--<p>Telefono: {{ proyecto.contacto }}</p>-->
 			</div>

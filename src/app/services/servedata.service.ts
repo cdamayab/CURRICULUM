@@ -1,18 +1,15 @@
 import { Injectable }                  from '@angular/core';
-import { ExperienceInterface }         from "../interfaces/experience.interface";
-import { arrExperience }               from "../data/mockup-experience";
 import { LanguajeInterface }           from '../interfaces/languaje.interface';
 import { BehaviorSubject, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ServeDataService {
+  export class ServeDataService {
     private static languageConstants       : any;
-	static selectedLanguage                : BehaviorSubject<string> = new BehaviorSubject<string>('es');
-	arrWorkexperiences                     : ExperienceInterface[]    = arrExperience;
+  static selectedLanguage                : BehaviorSubject<string> = new BehaviorSubject<string>('es');
 
-  	constructor() {}
+    constructor() {}
 
     static set_language(language: string) :void {
         try {
@@ -31,8 +28,8 @@ export class ServeDataService {
       }
 
     static get_languageConstants(): LanguajeInterface | undefined {
-    	return ServeDataService.languageConstants;
-  	}
+      return ServeDataService.languageConstants;
+    }
 
     static loadLanguageOptions(): string[] {
     const context = require.context('../data/languajes/', false, /\.language\.ts$/);
@@ -48,11 +45,4 @@ export class ServeDataService {
     return Array.from(uniqueOptions);
     }
 
-  	get_workExperiences(): ExperienceInterface[] {
-    	return this.arrWorkexperiences;
-  	}
-
-  	get_workExperience(id: number): ExperienceInterface | undefined {
-    	return this.arrWorkexperiences.find((r) => r.id === id);
-  	}
-}
+  }
