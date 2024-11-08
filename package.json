@@ -3,6 +3,9 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
+    "prebuild": "node src/app/scripts/readLnaguajes.js",
+    "predeploy": "node src/app/scripts/readLnaguajes.js",
+    "prestart": "node src/app/scripts/readLnaguajes.js",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",

@@ -11,25 +11,31 @@ export class HeaderComponent implements OnInit {
     languageOptions   : string[] = []           ;
     selectedLanguage  : string = ''             ;
     
-    constructor(){}
+    // Inyecta el servicio ServeDataService en el constructor
+    constructor(private serveDataService: ServeDataService) { }
 
     ngOnInit(): void {
         // Suscribirse al Observable del ServeDataService para detectar cambios de idioma
-        this.LANG = ServeDataService.get_languageConstants();
-        ServeDataService.get_Language().subscribe((language: string) => {
-            this.LANG = ServeDataService.get_languageConstants();
+        this.LANG = this.serveDataService.get_languageConstants();
+        this.serveDataService.get_Language().subscribe((language: string) => {
+            this.LANG = this.serveDataService.get_languageConstants();
         });
         // Inicializo el lenguaje
-        ServeDataService.set_language("es");
+        this.serveDataService.set_language("es");
         // Cargo las opciones de lenguajes disponibles 
-        this.languageOptions = ServeDataService.loadLanguageOptions();
+        // Cargo las opciones de lenguajes disponibles
+        this.serveDataService.loadLanguageOptions().then((languages) => {
+            this.languageOptions = languages;
+        }).catch((error) => {
+            console.error('Error al cargar las opciones de idiomas:', error);
+        });
     }
 
     onLanguageChange(event: Event): void {
         const selectedValue = (event.target as HTMLSelectElement)?.value;
         if (selectedValue) {
-        ServeDataService.set_language(selectedValue);
-        this.LANG = ServeDataService.get_languageConstants();
+        this.serveDataService.set_language(selectedValue);
+        this.LANG = this.serveDataService.get_languageConstants();
         }
     }
 

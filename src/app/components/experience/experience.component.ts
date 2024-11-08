@@ -3,25 +3,27 @@ import { ServeDataService } from '../../services/servedata.service';
 import { LanguajeInterface, ExperienceInterface } from "../../interfaces/languaje.interface";
 
 @Component({
-  selector: 'app-experience',
-  templateUrl: './experience.component.html',
-  styleUrls: ['./experience.component.css']
+    selector: 'app-experience',
+    templateUrl: './experience.component.html',
+    styleUrls: ['./experience.component.css']
 })
 export class ExperienceComponent implements OnInit {
-  LANG: any;  // Constantes para el lenguaje seleccionado
-  experience!: ExperienceInterface[];  // Arreglo de experiencias laborales
+    LANG: any;  // Constantes para el lenguaje seleccionado
+    experience!: ExperienceInterface[];  // Arreglo de experiencias laborales
 
-  constructor() { }
+    constructor(private serveDataService: ServeDataService) { }
 
-  ngOnInit(): void {
-    // Obtener las constantes del lenguaje y experiencias laborales
-    this.LANG = ServeDataService.get_languageConstants();
-    this.experience = this.LANG.EXPERIENCE;
-
-    // Suscribirse al Observable del ServeDataService para detectar cambios de idioma
-    ServeDataService.get_Language().subscribe((language: string) => {
-      this.LANG = ServeDataService.get_languageConstants();
-      this.experience = this.LANG.EXPERIENCE;  // Actualizar experiencias laborales según el idioma
-    });
-  }
+    async ngOnInit(): Promise<void> {
+        // Obtener las constantes del lenguaje y experiencias laborales
+        this.LANG = this.serveDataService.get_languageConstants();
+        if (this.LANG) {
+            this.experience = this.LANG.EXPERIENCE;
+        }
+        
+        // Suscribirse al Observable del ServeDataService para detectar cambios de idioma
+        this.serveDataService.get_Language().subscribe((language: string) => {
+            this.LANG = this.serveDataService.get_languageConstants();
+            this.experience = this.LANG.EXPERIENCE;  // Actualizar experiencias laborales según el idioma
+        });
+    }
 }

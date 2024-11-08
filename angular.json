@@ -69,7 +69,13 @@
             },
             "development": {
               "buildTarget": "portfolio:build:development"
-            }
+            },
+            "options": {
+              "assets": [
+                "src/favicon.ico",
+                "src/assets" 
+              ]
+          }
           },
           "defaultConfiguration": "development"
         },
